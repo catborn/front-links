@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Делаем свой кат на странице</title>
+  <style type="text/css">
+    /*  общие стили для страницы  */
+    body {
+      text-align: left;
+      margin: 10;
+      background: #e0e0e0;
+    }
+
+    h2 {
+      font-weight: 100;
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    /*  настройки внешнего вида блока с катом  */
+    .box {
+      font-family: Verdana, Arial, sans-serif;
+      line-height: 24px;
+      font-size: 16px;
+      font-weight: 200;
+      border-radius: 24px;
+      padding: 24px;
+      margin: 20px;
+      cursor: pointer;
+      background: white;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- общий блок с катом -->
+  <div onclick="look('div1')" class="box">
+    <!-- название ката -->
+    <h2>Семантическая вёрстка</h2>
+    <!-- скрытый блок, который появится при нажатии -->
+    <div id="div1" style="display: none">
+      <!-- сюда можно вставлять любое содержимое с любой сложностью вёрстки -->
+      <ul>
+        <li><a href="https://youtu.be/zN7lWroFOWA">Про валидатор</a></li>
+        <li><a href="https://front-end.su/2015/11/01/div-or-section-or-article/A">div или section</a></li>
+        <li><a href="https://proglib.io/p/study_html_forms">HTML-форма</a></li>
+        <li><a href="https://gist.github.com/kevinSuttle/1997924">Мета-теги и link-теги</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div onclick="look('div2)" class="box">
+    <!-- название ката -->
+    <h2>Семантическая вёрстка</h2>
+    <!-- скрытый блок, который появится при нажатии -->
+    <div id="div2" style="display: none">
+      <!-- сюда можно вставлять любое содержимое с любой сложностью вёрстки -->
+      <ul>
+        <li><a href="https://youtu.be/zN7lWroFOWA">Про валидатор</a></li>
+        <li><a href="https://front-end.su/2015/11/01/div-or-section-or-article/A">div или section</a></li>
+        <li><a href="https://proglib.io/p/study_html_forms">HTML-форма</a></li>
+        <li><a href="https://gist.github.com/kevinSuttle/1997924">Мета-теги и link-теги</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- скрипт, который раскрывает и закрывает кат -->
+  <script type="text/javascript">
+
+    function look(type) {
+      // получаем доступ к блоку, который нужно показать при нажатии
+      param = document.getElementById(type);
+      // если его нет на экране — показываем
+      if (param.style.display == "none") param.style.display = "block";
+      // иначе — скрываем
+      else param.style.display = "none"
+    }
+  </script>
+
+</body>
+
+</html>
