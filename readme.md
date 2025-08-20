@@ -1,1 +1,1 @@
-https://thecode.media/front-cut/
+Полезные ссылки
